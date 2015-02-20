@@ -1,3 +1,5 @@
+
+
 public class Formula {
 	
 	public static boolean CheckingFormula(String words){
