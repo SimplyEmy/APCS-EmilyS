@@ -1,0 +1,93 @@
+Chapter Two Exercises
+
+Analysis Questions Set 1:
+	1. step uses an array of Locatable objects (which is fish) that it receives from calling
+	theEnv.allObjects(). The Simulation constructor is passed the environment as one of its 
+	parameters.
+
+	2. The Simulation class works with moving the fish. So SimpleMBSDemo2 is able to construct 
+	a Simulation object and call it step method. SimpleMBSDemo2 does not display what the 
+	environment originally was because the Simulation has a constructor that does that and the 
+	Demo2 also does not have the job of displaying the environment after each movement and how 
+	the fish act because that job is up to the step method initiated with the Simulation class.
+
+Analysis Questions Set 2:
+	1. (6,3) (7,4) (8,3) (7,2)
+	
+	2. East
+	
+	3. South, North
+	
+	4. (6,3)
+	
+	5. (5,3)
+	
+	6. Location has a constructor for row and column parameters and then it also has equals, 
+	compareTo, hashCode and toString
+	compareTo - compares two locations for ordering
+	hashCode - generates a hashCode for the location
+	toString - makes the location be represented by a string and outputs a location. This 
+	could be used to print the location of a fish if something isn't working to see where it
+	is.
+	Direction has three constructors - one with no parameters that sets direction to North, 
+	one with one parameter that is degrees and another one with one parameter that is direction
+	in string form.
+	Direction has some public methods as well:
+	inDegrees - returns the direction value in degrees
+	equals(Object other) - checks if other is the same direction as the other direction then 
+	returns true or false.
+	toLeft - returns a direction 90 degrees to the left of the given direction
+	toRight - returns direction 90 degrees to the right of the given direction
+	toLeft(int degrees) - returns a direction int degrees to the left of the given direction
+	toRight(int degrees) - returns a direction int degrees to the right of the given direction 
+	reverse - returns direction reverse of the direction given
+	toString - represents direction as string
+	randomDirection - returns a random direction in 0 to 360 degrees
+	roundedDir - rounds given direction to nearest "cardinal" direction and returns it
+	hashCode - makes a hash code for the given Direction object
+	
+	toString can be used for debugging if needed it can send the direction of the fish.
+	
+	 
+	
+Exercise Set 1:
+	Complete? yes (file called Chpt2ExercisesSet1)
+	
+	2. North = 0, East = 90, South = 180, West = 270 and dir3 = 0
+	
+
+
+
+
+Analysis Questions Set 3:
+	1.
+	
+	2.
+	
+	3.
+	
+	4.
+	
+	5.
+	
+	6.
+	
+	7.
+	
+	8.
+	
+	9.
+	
+Exercise Set 2:
+	1.
+	
+	2.
+	
+	3.
+	
+Analysis Questions Set 4:	
+	1.
+	
+	2.	
+	
+		
