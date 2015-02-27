@@ -1,7 +1,7 @@
 //Chapter Two Exercises
 
 Analysis Questions Set 1:
-	1. step uses an array of Locatable objects (which is fish) that it receives from calling
+	1. Step uses an array of Locatable objects (which is fish) that it receives from calling
 	theEnv.allObjects(). The Simulation constructor is passed the environment as one of its 
 	parameters.
 
