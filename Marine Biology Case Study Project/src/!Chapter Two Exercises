@@ -32,6 +32,7 @@ Analysis Questions Set 2:
 	Direction has three constructors - one with no parameters that sets direction to North, 
 	one with one parameter that is degrees and another one with one parameter that is direction
 	in string form.
+	
 	Direction has some public methods as well:
 	inDegrees - returns the direction value in degrees
 	equals(Object other) - checks if other is the same direction as the other direction then 
@@ -56,27 +57,30 @@ Exercise Set 1:
 	2. North = 0, East = 90, South = 180, West = 270 and dir3 = 0
 	
 
-
-
+For later exercises:
 
 Analysis Questions Set 3:
-	1.
+	1. two
 	
-	2.
+	2. 2(2, 6)North, 1(7,3)South 
 	
-	3.
+	3. false
 	
-	4.
+	4. true
 	
-	5.
+	5. 2(2,6)North
 	
-	6.
+	6. null
 	
-	7.
+	7. No because a fish constructor adds the fish to the Environment, so there is no reason to add it again. 
+	The fish and the environment need to agree on where the fish is and so the fish is the one to add itself
+	so when it is constructed both the constructor and the fish have the same location for it.
 	
-	8.
+	8. It is private because you wouldn't want anything else to change the fish location or direction. The fish 
+	could move somewhere else because a code messed with initialize and therefore messing up the environment and fish. 
 	
-	9.
+	9. You could make theEnv a class variable but if you do that all the fish will live in the same environment 
+	and you could not display two simulations at the same time, as you could if theEnv stayed as an instance variable.
 	
 Exercise Set 2:
 	1.
@@ -85,6 +89,8 @@ Exercise Set 2:
 	
 	3.
 	
+
+
 Analysis Questions Set 4:	
 	1.
 	

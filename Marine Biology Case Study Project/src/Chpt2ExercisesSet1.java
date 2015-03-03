@@ -16,6 +16,8 @@ public class Chpt2ExercisesSet1 {
         // Construct an empty environment and several fish in the context
         // of that environment.
         BoundedEnv env = new BoundedEnv(ENV_ROWS, ENV_COLS);
+       
+        
         Location loc1 = new Location(7, 3);
         Location loc2 = new Location(7, 4);
         Direction dir1 = env.getDirection(loc1, loc2);
