@@ -15,8 +15,45 @@ public class Chapt2ExercisesSet2 {
 		Location loc3 = new Location(4, 8);
 		Fish f1 = new Fish(env, loc1);
 		Fish f2 = new Fish(env, loc2);
+	
+		//Exercise 2 Question 3
+		//env.add(new Fish(env, new Location(8,8)));
 		
-		//Checking Answers
+		//Exercise 2 Question 2
+		//Adding more fish 
+		Fish f3 = new Fish(env, new Location(0, 0));
+		Fish f4 = new Fish(env, new Location(2, 7));
+		Fish f5 = new Fish(env, new Location(7, 7));
+		
+		//printing Number of objects
+		System.out.println("Number of objects: " + env.numObjects());
+		
+		//printing the objects
+        System.out.println("Objects in the environment are: ");
+        Locatable[] fishList = env.allObjects();
+        for(int idx = 0; idx < fishList.length; idx++){
+        	System.out.println((Fish) fishList[idx]);
+        }
+        
+		// Removing some fish and printing again
+        env.remove(f2);
+        env.remove(f4);
+        
+        System.out.println("After removing fishes f2 and f4, the objects in the environment in the environment are: ");
+        
+        fishList = env.allObjects();
+        for(int x = 0; x < fishList.length; x++){
+        	System.out.println((Fish) fishList[x]);
+        }
+        
+        //Checking if locations are empty
+        System.out.println("Is the location of f1 empty? " + env.isEmpty(f1.location()));
+        
+        System.out.println("Is the location of f2 empty? " + env.isEmpty(f2.location()));
+		
+		
+		
+		/*//Checking Answers for question 1
 		
 		//Question 1
 		System.out.println("Number of objects: " + env.numObjects());
@@ -39,6 +76,7 @@ public class Chapt2ExercisesSet2 {
         
         //Question 6
         System.out.println("The object at loc3 is " + (Fish)env.objectAt(loc3));
-    
-	}
+        */
+        
+    }
 }

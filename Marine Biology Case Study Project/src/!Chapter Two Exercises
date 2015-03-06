@@ -83,22 +83,29 @@ Analysis Questions Set 3:
 	and you could not display two simulations at the same time, as you could if theEnv stayed as an instance variable.
 	
 Exercise Set 2:
-	1.
+	1. Driver made? yes
 	
-	2.
+	2. yes is empty does behave as expected giving the one I removed true and the one I did not remove false.
 	
-	3.
+	3. Adding this string to my Driver gave me an Error saying Location (8, 8) is not a valid empty location
+	at BoundedEnv.add... So this is not a valid empty location. A fish cannot be added at this location because it
+	either is taken or it is not a valid place.
 	
 
 
 Analysis Questions Set 4:	
-	1.
+	1. The fish starts in a consistent state because when adding a fish to the environment, the environment takes 
+	the fish and it locations and adds it to the environment. So the fish and the environment agree on the fish's
+	location. 
 	
-	2.	
+	2. If a fish is removed from the environment, then it will still believe it is at a particular location. The 
+	fish is the one holding the location, keeping track of it. This would therefore put the fish in an inconsistent 
+	state because it is not linked with the environment. Also if the method recordMove in Environment does not 
+	fully work the fish could change to an inconsistent state. 	
 	
 Analysis Question Set 5:
 
-	1.
+	1. 
 	
 	2.
 	
