@@ -105,15 +105,18 @@ Analysis Questions Set 4:
 	
 Analysis Question Set 5:
 
-	1. 
+	1. true, true
 	
-	2.
+	2. false, false
 	
-	3.
+	3. false, true
 
 Analysis Question Set 6:
 
-	1.
+	1. The the neighborsOf method returns all valid neighboring locations, not just those that are empty. The 
+	emptyNeighbors code that obtains a fish's empty neighbors from the environment could have been included in
+	nextLocation but each method is better when preforming one defined tasked and not two or three. We do not
+	want to over load nextLocation so emptyNeighbors was made to spread it out.
 	
 Exercise Set 3:
 
