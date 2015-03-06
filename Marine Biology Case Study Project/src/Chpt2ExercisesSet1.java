@@ -13,11 +13,6 @@ public class Chpt2ExercisesSet1 {
     
     public static void main(String[] args)
     {
-    	System.out.println("x");
-    }
-    
-    public static void mainSet1(String[] args)
-    {
         // Construct an empty environment and several fish in the context
         // of that environment.
         BoundedEnv env = new BoundedEnv(ENV_ROWS, ENV_COLS);
