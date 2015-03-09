@@ -120,10 +120,17 @@ Analysis Question Set 6:
 	
 Exercise Set 3:
 
-	1.
+	1. Made set 3 class instead of modifying set 2, but does the same thing
 	
-	2.
+	2. Location (0, 0) has 2 neighbors
+	   Location (0, 1) has 3 neighbors
+	   Location (1, 1) has 4 neighbors
+	   The neighbors of location (0, 0) are: (0, 1) (1, 0) 
+	   The neighbors of location (0, 1) are: (0, 2) (1, 1) (0, 0) 
+	   The neighbors of location (1, 1) are: (0, 2) (1, 1) (0, 0) 
 	
-	3.			
+	3. All four corners will have 2 neighbors, all boundry locations will have 3 neighbors and all interior 
+	locations will have 4. So for example (19, 19) will have 2 neighbors because it is a corner, (0, 18) will 
+	have 3 because it is an edge location.  
 	
 		

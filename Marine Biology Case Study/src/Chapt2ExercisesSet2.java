@@ -53,16 +53,16 @@ public class Chapt2ExercisesSet2 {
 		
 		
 		
-		/*//Checking Answers for question 1
+		//Checking Answers for question 1
 		
 		//Question 1
 		System.out.println("Number of objects: " + env.numObjects());
 	
 		//Question 2
         System.out.println("Objects in the environment are: ");
-        Locatable[] fishList = env.allObjects();
-        for(int idx = 0; idx < fishList.length; idx++){
-        	System.out.println((Fish) fishList[idx]);
+        Locatable[] FishList = env.allObjects();
+        for(int idx = 0; idx < FishList.length; idx++){
+        	System.out.println((Fish) FishList[idx]);
         }
         
         //Question 3
@@ -76,7 +76,7 @@ public class Chapt2ExercisesSet2 {
         
         //Question 6
         System.out.println("The object at loc3 is " + (Fish)env.objectAt(loc3));
-        */
+        
         
     }
 }
