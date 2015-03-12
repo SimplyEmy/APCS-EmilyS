@@ -104,7 +104,6 @@ Analysis Questions Set 4:
 	fully work the fish could change to an inconsistent state. 	
 	
 Analysis Question Set 5:
-
 	1. true, true
 	
 	2. false, false
@@ -112,14 +111,12 @@ Analysis Question Set 5:
 	3. false, true
 
 Analysis Question Set 6:
-
 	1. The the neighborsOf method returns all valid neighboring locations, not just those that are empty. The 
 	emptyNeighbors code that obtains a fish's empty neighbors from the environment could have been included in
 	nextLocation but each method is better when preforming one defined tasked and not two or three. We do not
 	want to over load nextLocation so emptyNeighbors was made to spread it out.
 	
 Exercise Set 3:
-
 	1. Made set 3 class instead of modifying set 2, but does the same thing
 	
 	2. Location (0, 0) has 2 neighbors
@@ -131,6 +128,56 @@ Exercise Set 3:
 	
 	3. All four corners will have 2 neighbors, all boundry locations will have 3 neighbors and all interior 
 	locations will have 4. So for example (19, 19) will have 2 neighbors because it is a corner, (0, 18) will 
-	have 3 because it is an edge location.  
+	have 3 because it is an edge location. 
+	
+Analysis Question Set 7:
+	1.
+	
+	2.
+	
+	3.
+	
+Analysis Question Set 8:
+	1.	 
+	
+	2.
+	
+Exercise Set 4:
+	1.
+	
+	2.
+	
+Analysis Question Set 9:
+	1.
+	
+	2.
+	
+	3.
+	
+Exercise Set 5:
+	1.
+	
+	2.
+	
+	3.
+	
+	4.
+	
+	5.
+	
+	6.
+	
+	7.
+	
+Analysis Question Set 10:
+	1.
+	
+	2.
+	
+	3.
+	
+	4. 
+	
+	5.				
 	
 		
