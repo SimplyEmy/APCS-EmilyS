@@ -131,22 +131,44 @@ Exercise Set 3:
 	have 3 because it is an edge location. 
 	
 Analysis Question Set 7:
-	1.
-	
-	2.
-	
-	3.
+	1. In each diagram the fish location (1,0) has three neighbors.
+
+	2. 
+		a. 1   
+		b. 1   
+		c. 2   
+		d. 3
+
+	3. 
+		a. none
+		b. (1, 1)
+		c. (1, 1), (2, 0)
+		d. (0, 0), (1, 1), (2, 0)
+
 	
 Analysis Question Set 8:
-	1.	 
-	
-	2.
+	1. For the fish in location (2, 2)
+		- move will call nextLocation
+		- nextLocation will call emptyNeighbors
+		- emptyNeighbors will first get a list of the four neighbors around location (2, 2), nbrs and then 
+		  determine and return a list of empty neighbors, (1, 2), (2, 1) and (2, 3)
+		- oppositeDir will then be set to the location behing the fish , (2, 1) and that location will be 
+		  removed from the list of empty neighbors.
+		- If there are no empty neighbors to select a new location from, the fishs current location is returned, 
+		  but in this case there are still two empty neighbors left.
+		- An index is otherwise randomly selected and the location of the empty neighbors at that index returned
+		- the fish in location (2, 2) might move to (1, 2) or (2, 3) depending on the randomly chosen index.
+
+	2. a new instance variable name myAge would have to be initialized in the initialize method and incremented, 
+	"upon each time step the fish age is incremented by 1". To get the age you will need another method (age) and 
+	maybe in the end modify the toString method to print the age.
+
 	
 Exercise Set 4:
-	1.
-	
-	2.
-	
+	1. Code to change color added? yes
+
+	2. Code to construct Fish using third fish constructor? yes in Chapt2ExerciseSets4
+
 Analysis Question Set 9:
 	1.
 	

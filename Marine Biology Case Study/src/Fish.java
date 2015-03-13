@@ -88,7 +88,7 @@ public class Fish implements Locatable
     {
         initialize(env, loc, dir, col);
     }
-
+ 
     /** Initializes the state of this fish.
      *  (Precondition: parameters are non-null; <code>loc</code> is valid
      *  for <code>env</code>.)
@@ -110,7 +110,13 @@ public class Fish implements Locatable
 
         // object is at location myLoc in environment
     }
-
+    
+	//Color change for Exercise Set 4 Question 1
+    //Changing fishes color to the color in the parameters
+    public void changeColor(Color newColor){
+    	myColor = newColor;
+    }
+    
     /** Generates a random color.
      *  @return       the new random color
      **/
@@ -293,5 +299,7 @@ public class Fish implements Locatable
         // Change direction.
         myDir = newDir;
     }
+
+	
 
 }
