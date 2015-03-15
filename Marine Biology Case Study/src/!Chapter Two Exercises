@@ -240,9 +240,13 @@ Exercise Set 5:
 	
 	
 Analysis Question Set 10:
-	1. The last scenario corresponds tot he design chosen by the original programmer.
+	1. The last scenario corresponds to the design chosen by the original programmer.
 	
-	2.
+	2. In the second scenario the simulation class will take more or of the jobs that the environment usually does. It
+	   would keep track of not only what behavior is is required ad part of the simulation but also is responsible
+	   of all the fish in the environment and ask them to move. The environment would end up only setting the grid and
+	   adding rows and columns and how the environment is when the simulations would have the add, remove and recordMoves
+	   method instead. The fish method would be exactly the same but it would just call simulation instead of environment.
 	
 	3.
 	
