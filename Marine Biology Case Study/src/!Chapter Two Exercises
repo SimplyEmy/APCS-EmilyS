@@ -248,10 +248,23 @@ Analysis Question Set 10:
 	   adding rows and columns and how the environment is when the simulations would have the add, remove and recordMoves
 	   method instead. The fish method would be exactly the same but it would just call simulation instead of environment.
 	
-	3.
+	3. I definitely think the one that is uses now represents a good design choice because of the evenly spread methods through
+	   each class. The Simulation, fish and environment classes all work together well and have their own purpose. I think 
+	   having the environment deal with the spread and also the fish's movement works well because it can easily work with the 
+	   fish class and also have the environment saved in one class. If it was all in the simulation class there would be too 
+	   much saved in one class that is also being sent through and receiving from fish. But having the simulation class is 
+	   important in this case because it is dealing with a particular environment when environment would be just overall. And
+	   of course fish should deal with ID and color and location because it is the specifics about particular fish.
 	
-	4. 
+	4. The fourth scenario would be bad and just doesn't make sense. Why would you have the environment stuff in simulation and 
+	   all the fish stuff in environment? Honestly that scenario is just bad planning because the reason for having each class is
+	   to organize the code and make it make sense, but calling environment and have it not deal with the environment does not make 
+	   sense.
 	
-	5.				
+	5. I think because the way we have it now how it is so spread apart for each class and what they do it could help and work with
+	   different application. Due to the classes have methods that can run together and are not just put all together you could use 
+	   them in other cases. The fish class could be used for a whole different system other than fish because of it dealing with ID, 
+	   location and color for example and not the environment so much. It has the ability to be changed around and used else where.
+	   Just like environment as well.  
 	
 		
