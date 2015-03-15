@@ -170,29 +170,77 @@ Exercise Set 4:
 	2. Code to construct Fish using third fish constructor? yes in Chapt2ExerciseSets4
 
 Analysis Question Set 9:
-	1.
-	
-	2.
-	
-	3.
+	1. There  might be a fish whose location is outside the bounded environment or the environment dimensions 
+	   might be invalid. The test cases involving input and multiple fish in the same location can be tested 
+	   with appropriate initial configuration files.
+
+	2. 
+		a. A file with a fish in every location - multiple neighbors and a non-empty neighbor 
+		b. A fish with a single adjacent empty location behind it - an empty neighbor.
+		c. A file with a single fish in an environment bugger than 1 x 2 - multiple neighbors.
+
+	3. The environment could have exactly one row and two columns or one column and two rows. In each case there 
+	   are exactly two locations, one occupied by the fish and the other empty.
+
 	
 Exercise Set 5:
-	1.
+	1. Running seeded simulation - yes
 	
-	2.
+	2. The text output gives me the fish ID, its location and direction of each step the fish takes or can take in the next step.
 	
-	3.
+	3. Test Cases
+	Step	Fish 1			Fish 2			Fish 3			Fish 4			Fish 5			Fish 6
+	 0		(5, 5)North		(3, 3)South		(10, 10)East	(6, 8)West		(2, 10)North	(1, 1)South
+	 1		(4, 5)North		(4, 3)South		(11, 10)South	(5, 8)North		(2, 11)East		(1, 0)West
+	 2		(3, 5)North		(5, 3)South		(11, 11)East	(5, 9)East		(1, 11)North	(2, 0)South
+	 3		(2, 5)North		(5, 2)West		(10, 11)North	(6, 9)South		(0, 11)North	(3, 0)South
+	 4		(2, 6)East		(6, 2)South		(9, 11)North	(6, 10)East		(0, 10)West		(4, 0)South
+	 5		(3, 6)South		(6, 3)East		(9, 10)West		(7, 10)South	(1, 10)South	(5, 0)South
 	
-	4.
+	4. Saved new file with timesteps - yes
 	
-	5.
+	5. The order is top-down, left to right order. As each fish moves, it can change the available locations for a fish that has
+	   not yet had its turn to move. Fish does not specify this order. This is row majoring and not column so if it was column 
+	   it would be different.
 	
-	6.
+	6. Dat files:
+		invalidenv.dat:
+			bounded 12
+		
+		emptyenv.dat
+			bounded 12 12
+			
+		onefish.dat
+			bounded 12 12Fish 3 4 South
+			
+		twofishsameloc.dat:
+			bounded 20 20Fish 5 5 NorthFish 3 2 SouthFish 5 5 East		
+			
+		fullenv.dat
+			bounded 1 1Fish 0 0 NorthFish 1 1 NorthFish 0 1 SouthFish 1 0 North  	
 	
 	7.
+	Test cases required for move:
+		- A fish with no available locations where it can move should remain in its current location.
+		- A fish with at least one available location where it can move should move to the location.
+
+	Test Case required for nextLocation:
+		- A fish for which there are no empty neighbors or where the only empty neighbor is the one behind it should 
+		  return its current location.
+		- A fish for which there is at least one valid available location, in front, to the left, or to the right, 
+		  should return one of those locations.
+
+	Test cases required for emptyNeighbors:
+		- A fish with no valid adjacent neighbors should return ArrayList.
+		- A fish with four or fewer adjacent locations, all containing valid fish, should return an empty ArrayList.
+		- A fish with at least one empty adjacent location, should return a list of empty neighbors (possibly including 
+		  the location behind the fish).
+		- A fish with four empty adjacent locations should return a list of all four locations(including the 
+		  location behind the fish).
+	
 	
 Analysis Question Set 10:
-	1.
+	1. The last scenario corresponds tot he design chosen by the original programmer.
 	
 	2.
 	

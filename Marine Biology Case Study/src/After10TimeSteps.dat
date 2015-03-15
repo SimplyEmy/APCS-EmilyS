@@ -1,0 +1,80 @@
+Fish 6(1, 1)South attempting to move.  Possible new locations are: [(1, 2), (2, 1), (1, 0)]  Moves to (1, 0)West
+Fish 5(2, 10)North attempting to move.  Possible new locations are: [(1, 10), (2, 11), (2, 9)]  Moves to (2, 11)East
+Fish 2(3, 3)South attempting to move.  Possible new locations are: [(3, 4), (4, 3), (3, 2)]  Moves to (4, 3)South
+Fish 1(5, 5)North attempting to move.  Possible new locations are: [(4, 5), (5, 6), (5, 4)]  Moves to (4, 5)North
+Fish 4(6, 8)West attempting to move.  Possible new locations are: [(5, 8), (7, 8), (6, 7)]  Moves to (5, 8)North
+Fish 3(10, 10)East attempting to move.  Possible new locations are: [(9, 10), (10, 11), (11, 10)]  Moves to (11, 10)South
+Environment contains 6 objects: 6(1, 0)West 5(2, 11)East 2(4, 3)South 1(4, 5)North 4(5, 8)North 3(11, 10)South 
+-------- End of Timestep --------
+Fish 6(1, 0)West attempting to move.  Possible new locations are: [(0, 0), (2, 0)]  Moves to (2, 0)South
+Fish 5(2, 11)East attempting to move.  Possible new locations are: [(1, 11), (3, 11)]  Moves to (1, 11)North
+Fish 2(4, 3)South attempting to move.  Possible new locations are: [(4, 4), (5, 3), (4, 2)]  Moves to (5, 3)South
+Fish 1(4, 5)North attempting to move.  Possible new locations are: [(3, 5), (4, 6), (4, 4)]  Moves to (3, 5)North
+Fish 4(5, 8)North attempting to move.  Possible new locations are: [(4, 8), (5, 9), (5, 7)]  Moves to (5, 9)East
+Fish 3(11, 10)South attempting to move.  Possible new locations are: [(11, 11), (11, 9)]  Moves to (11, 11)East
+Environment contains 6 objects: 5(1, 11)North 6(2, 0)South 1(3, 5)North 2(5, 3)South 4(5, 9)East 3(11, 11)East 
+-------- End of Timestep --------
+Fish 5(1, 11)North attempting to move.  Possible new locations are: [(0, 11), (1, 10)]  Moves to (0, 11)North
+Fish 6(2, 0)South attempting to move.  Possible new locations are: [(2, 1), (3, 0)]  Moves to (3, 0)South
+Fish 1(3, 5)North attempting to move.  Possible new locations are: [(2, 5), (3, 6), (3, 4)]  Moves to (2, 5)North
+Fish 2(5, 3)South attempting to move.  Possible new locations are: [(5, 4), (6, 3), (5, 2)]  Moves to (5, 2)West
+Fish 4(5, 9)East attempting to move.  Possible new locations are: [(4, 9), (5, 10), (6, 9)]  Moves to (6, 9)South
+Fish 3(11, 11)East attempting to move.  Possible new locations are: [(10, 11)]  Moves to (10, 11)North
+Environment contains 6 objects: 5(0, 11)North 1(2, 5)North 6(3, 0)South 2(5, 2)West 4(6, 9)South 3(10, 11)North 
+-------- End of Timestep --------
+Fish 5(0, 11)North attempting to move.  Possible new locations are: [(0, 10)]  Moves to (0, 10)West
+Fish 1(2, 5)North attempting to move.  Possible new locations are: [(1, 5), (2, 6), (2, 4)]  Moves to (2, 6)East
+Fish 6(3, 0)South attempting to move.  Possible new locations are: [(3, 1), (4, 0)]  Moves to (4, 0)South
+Fish 2(5, 2)West attempting to move.  Possible new locations are: [(4, 2), (6, 2), (5, 1)]  Moves to (6, 2)South
+Fish 4(6, 9)South attempting to move.  Possible new locations are: [(6, 10), (7, 9), (6, 8)]  Moves to (6, 10)East
+Fish 3(10, 11)North attempting to move.  Possible new locations are: [(9, 11), (10, 10)]  Moves to (9, 11)North
+Environment contains 6 objects: 5(0, 10)West 1(2, 6)East 6(4, 0)South 2(6, 2)South 4(6, 10)East 3(9, 11)North 
+-------- End of Timestep --------
+Fish 5(0, 10)West attempting to move.  Possible new locations are: [(1, 10), (0, 9)]  Moves to (1, 10)South
+Fish 1(2, 6)East attempting to move.  Possible new locations are: [(1, 6), (2, 7), (3, 6)]  Moves to (3, 6)South
+Fish 6(4, 0)South attempting to move.  Possible new locations are: [(4, 1), (5, 0)]  Moves to (5, 0)South
+Fish 2(6, 2)South attempting to move.  Possible new locations are: [(6, 3), (7, 2), (6, 1)]  Moves to (6, 3)East
+Fish 4(6, 10)East attempting to move.  Possible new locations are: [(5, 10), (6, 11), (7, 10)]  Moves to (7, 10)South
+Fish 3(9, 11)North attempting to move.  Possible new locations are: [(8, 11), (9, 10)]  Moves to (9, 10)West
+Environment contains 6 objects: 5(1, 10)South 1(3, 6)South 6(5, 0)South 2(6, 3)East 4(7, 10)South 3(9, 10)West 
+-------- End of Timestep --------
+Fish 5(1, 10)South attempting to move.  Possible new locations are: [(1, 11), (2, 10), (1, 9)]  Moves to (1, 11)East
+Fish 1(3, 6)South attempting to move.  Possible new locations are: [(3, 7), (4, 6), (3, 5)]  Moves to (3, 7)East
+Fish 6(5, 0)South attempting to move.  Possible new locations are: [(5, 1), (6, 0)]  Moves to (6, 0)South
+Fish 2(6, 3)East attempting to move.  Possible new locations are: [(5, 3), (6, 4), (7, 3)]  Moves to (7, 3)South
+Fish 4(7, 10)South attempting to move.  Possible new locations are: [(7, 11), (8, 10), (7, 9)]  Moves to (7, 9)West
+Fish 3(9, 10)West attempting to move.  Possible new locations are: [(8, 10), (10, 10), (9, 9)]  Moves to (8, 10)North
+Environment contains 6 objects: 5(1, 11)East 1(3, 7)East 6(6, 0)South 2(7, 3)South 4(7, 9)West 3(8, 10)North 
+-------- End of Timestep --------
+Fish 5(1, 11)East attempting to move.  Possible new locations are: [(0, 11), (2, 11)]  Moves to (2, 11)South
+Fish 1(3, 7)East attempting to move.  Possible new locations are: [(2, 7), (3, 8), (4, 7)]  Moves to (2, 7)North
+Fish 6(6, 0)South attempting to move.  Possible new locations are: [(6, 1), (7, 0)]  Moves to (7, 0)South
+Fish 2(7, 3)South attempting to move.  Possible new locations are: [(7, 4), (8, 3), (7, 2)]  Moves to (7, 2)West
+Fish 4(7, 9)West attempting to move.  Possible new locations are: [(6, 9), (8, 9), (7, 8)]  Moves to (7, 8)West
+Fish 3(8, 10)North attempting to move.  Possible new locations are: [(7, 10), (8, 11), (8, 9)]  Moves to (8, 11)East
+Environment contains 6 objects: 1(2, 7)North 5(2, 11)South 6(7, 0)South 2(7, 2)West 4(7, 8)West 3(8, 11)East 
+-------- End of Timestep --------
+Fish 1(2, 7)North attempting to move.  Possible new locations are: [(1, 7), (2, 8), (2, 6)]  Moves to (2, 6)West
+Fish 5(2, 11)South attempting to move.  Possible new locations are: [(3, 11), (2, 10)]  Moves to (3, 11)South
+Fish 6(7, 0)South attempting to move.  Possible new locations are: [(7, 1), (8, 0)]  Moves to (8, 0)South
+Fish 2(7, 2)West attempting to move.  Possible new locations are: [(6, 2), (8, 2), (7, 1)]  Moves to (6, 2)North
+Fish 4(7, 8)West attempting to move.  Possible new locations are: [(6, 8), (8, 8), (7, 7)]  Moves to (6, 8)North
+Fish 3(8, 11)East attempting to move.  Possible new locations are: [(7, 11), (9, 11)]  Moves to (9, 11)South
+Environment contains 6 objects: 1(2, 6)West 5(3, 11)South 2(6, 2)North 4(6, 8)North 6(8, 0)South 3(9, 11)South 
+-------- End of Timestep --------
+Fish 1(2, 6)West attempting to move.  Possible new locations are: [(1, 6), (3, 6), (2, 5)]  Moves to (1, 6)North
+Fish 5(3, 11)South attempting to move.  Possible new locations are: [(4, 11), (3, 10)]  Moves to (3, 10)West
+Fish 2(6, 2)North attempting to move.  Possible new locations are: [(5, 2), (6, 3), (6, 1)]  Moves to (6, 1)West
+Fish 4(6, 8)North attempting to move.  Possible new locations are: [(5, 8), (6, 9), (6, 7)]  Moves to (6, 9)East
+Fish 6(8, 0)South attempting to move.  Possible new locations are: [(8, 1), (9, 0)]  Moves to (9, 0)South
+Fish 3(9, 11)South attempting to move.  Possible new locations are: [(10, 11), (9, 10)]  Moves to (9, 10)West
+Environment contains 6 objects: 1(1, 6)North 5(3, 10)West 2(6, 1)West 4(6, 9)East 6(9, 0)South 3(9, 10)West 
+-------- End of Timestep --------
+Fish 1(1, 6)North attempting to move.  Possible new locations are: [(0, 6), (1, 7), (1, 5)]  Moves to (1, 7)East
+Fish 5(3, 10)West attempting to move.  Possible new locations are: [(2, 10), (4, 10), (3, 9)]  Moves to (3, 9)West
+Fish 2(6, 1)West attempting to move.  Possible new locations are: [(5, 1), (7, 1), (6, 0)]  Moves to (5, 1)North
+Fish 4(6, 9)East attempting to move.  Possible new locations are: [(5, 9), (6, 10), (7, 9)]  Moves to (7, 9)South
+Fish 6(9, 0)South attempting to move.  Possible new locations are: [(9, 1), (10, 0)]  Moves to (9, 1)East
+Fish 3(9, 10)West attempting to move.  Possible new locations are: [(8, 10), (10, 10), (9, 9)]  Moves to (9, 9)West
+Environment contains 6 objects: 1(1, 7)East 5(3, 9)West 2(5, 1)North 4(7, 9)South 6(9, 1)East 3(9, 9)West 
+-------- End of Timestep --------

@@ -54,7 +54,10 @@ public class Simulation
     /** Runs through a single step of this simulation. **/
     public void step()
     {
-        // Get all the fish in the environment and ask each
+        //turning on debug for Chapter 2 Exercise Set 5
+    	Debug.turnOn();
+    	
+    	// Get all the fish in the environment and ask each
         // one to perform the actions it does in a timestep.
         Locatable[] theFishes = theEnv.allObjects();
         for ( int index = 0; index < theFishes.length; index++ )
