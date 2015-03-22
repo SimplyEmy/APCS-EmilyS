@@ -18,9 +18,9 @@ public class Chapt2ExercisesSet4 {
 		Direction dir = new Direction("east");
 		Color col = new Color(200, 50, 50);
 	
-		Fish f1 = new Fish(env, new Location(2, 2), dir, col);
-		Fish f2 = new Fish(env, new Location(2, 3), new Direction ("west"), new Color(100, 150, 50));
-		Fish f3 = new Fish(env, new Location(5, 8), new Direction("south"), new Color(50, 50, 100));
+		OrigFish f1 = new OrigFish(env, new Location(2, 2), dir, col);
+		OrigFish f2 = new OrigFish(env, new Location(2, 3), new Direction ("west"), new Color(100, 150, 50));
+		OrigFish f3 = new OrigFish(env, new Location(5, 8), new Direction("south"), new Color(50, 50, 100));
 
 
 		for(int x = 0; x < NUM_STEPS; x++){

@@ -1,16 +1,29 @@
 Chapter Three Exercises
 
 Analysis Question Set 1:
-	1.
+	1. No, the simulation object asks the environment for a list of al it's objects , so it has a reference to
+	   each fish also. That reference still exists after  the environment has removed the fish . This is why 
+	   the act method in Fish calls isInEnv.
 	
-	2.
+	
+	2. The change would advantageous if behavior were added to the act method that depended on  whether or not 
+	   the fish had moved. There are no disadvantages other than in the current context the act method would 
+	   end up ignoring the return value of a method call.
 	
 Analysis Question Set 2:
-	1.
+	1. I think I would create separate methods because each has it's own task. Having a method that has them 
+	   together would be crowded and  and would be harder to understand.
 	
-	2.
+	2. You might easily put the test for empty neighbors in the act method. If the test was false, your code 
+	   could bypass both attempting to breed and attempting to move. However the code is more readable and 
+	   true to the simulation as it is write.. A fish will first attempt to breed and of the fish doesn't 
+	   breed then it attempts to love . Although i do think the the test for when a fish does should have been 
+	   placed in the die method because it would make more sense because it would be more consistent with the 
+	   program and also easier to understand.
 	
-	3.
+	3. Readability is the main advantage . Sometimes when you add a Boolean variable it makes reading the code 
+	   more understandable. But there are variables that are unnecessary and may end up increasing the complexity 
+	   of the code and make it not as readable. But all of this is a design decision and ends up being how the 
 	
 Exercise Set 1:
 	1.
