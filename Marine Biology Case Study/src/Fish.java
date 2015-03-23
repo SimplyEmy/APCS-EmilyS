@@ -53,9 +53,11 @@ public class Fish implements Locatable
     private Color myColor;             // fish's color
 // THE FOLLOWING TWO INSTANCE VARIABLES ARE NEW IN CHAPTER 3 !!!
     private double probOfBreeding;     // defines likelihood in each timestep
-    private double probOfDying;        // defines likelihood in each timestep
-
-
+    private double probOfDying; 	   // defines likelihood in each timestep
+    private int myTimesBred;		   // the number of times a fish bred in its lifetime
+    private int myAge;
+    
+    
   // constructors and related helper methods
 
     /** Constructs a fish at the specified location in a given environment.
@@ -67,7 +69,7 @@ public class Fish implements Locatable
      **/
     public Fish(Environment env, Location loc)
     {
-        initialize(env, loc, env.randomDirection(), randomColor());
+        initialize(env, loc, env.randomDirection(), randomColor(), 1.0/3.0, 1.0/10.0);
     }
 
     /** Constructs a fish at the specified location and direction in a
@@ -80,7 +82,7 @@ public class Fish implements Locatable
      **/
     public Fish(Environment env, Location loc, Direction dir)
     {
-        initialize(env, loc, dir, randomColor());
+        initialize(env, loc, dir, randomColor(), 1.0/3.0, 1.0/10.0);
     }
 
     /** Constructs a fish of the specified color at the specified location
@@ -94,7 +96,7 @@ public class Fish implements Locatable
      **/
     public Fish(Environment env, Location loc, Direction dir, Color col)
     {
-        initialize(env, loc, dir, col);
+        initialize(env, loc, dir, col, 1.0/3.0, 1.0/10.0);
     }
 
     /** Initializes the state of this fish.
@@ -105,9 +107,16 @@ public class Fish implements Locatable
      *  @param dir    direction this fish is facing
      *  @param col    color of this fish
      **/
+    
+    // For Chapter 3 Question 5
+    public Fish(Environment env, Location loc, Direction dir, Color col, double probBreed, double probDie){
+    	
+    	initialize(env, loc, dir, col, probBreed, probDie);
+    	
+    }
+    
     private void initialize(Environment env, Location loc, Direction dir,
-                            Color col)
-    {
+                            Color col, double breeding, double dying){
         theEnv = env;
         myId = nextAvailableID;
         nextAvailableID++;
@@ -121,8 +130,18 @@ public class Fish implements Locatable
 // THE FOLLOWING CODE IS NEW IN CHAPTER 3 !!!
         // For now, every fish is equally likely to breed or die in any given
         // timestep, although this could be individualized for each fish.
-        probOfBreeding = 1.0/7.0;   // 1 in 7 chance in each timestep
-        probOfDying = 1.0/5.0;      // 1 in 5 chance in each timestep
+        //probOfBreeding = breeding;   // 1 in 7 chance in each timestep
+        //probOfDying = dying;      // 1 in 5 chance in each timestep
+        
+        probOfBreeding = 1.0/3.0;   // 1 in 7 chance in each timestep
+        probOfDying = 1.0/10.0;
+        
+        //chapter 3 question 6 
+        myTimesBred = 0;
+        
+        //chapter 3 question 7
+        myAge = 0;
+        
     }
 
     /** Generates a random color.
@@ -207,7 +226,9 @@ public class Fish implements Locatable
      **/
     public void act()
     {
-        // Make sure fish is alive and well in the environment -- fish
+        
+    	myAge++;
+    	// Make sure fish is alive and well in the environment -- fish
         // that have been removed from the environment shouldn't act.
         if ( ! isInEnv() )
             return;
@@ -221,6 +242,8 @@ public class Fish implements Locatable
         Random randNumGen = RandNumGenerator.getInstance();
         if ( randNumGen.nextDouble() < probOfDying )
             die();
+        
+        probOfDying += 0.1;
     }
 
 
@@ -233,7 +256,12 @@ public class Fish implements Locatable
      **/
     protected boolean breed()
     {
-        // Determine whether this fish will try to breed in this
+        
+    	if(myAge < 3){
+    		return false;
+    	}
+    	
+    	// Determine whether this fish will try to breed in this
         // timestep.  If not, return immediately.
         Random randNumGen = RandNumGenerator.getInstance();
         if ( randNumGen.nextDouble() >= probOfBreeding )
@@ -257,7 +285,9 @@ public class Fish implements Locatable
             Location loc = (Location) emptyNbrs.get(index);
             generateChild(loc);
         }
-
+        //for chapter 3 question 6
+        myTimesBred++;
+        
         return true;
     }
 
@@ -269,7 +299,7 @@ public class Fish implements Locatable
     {
         // Create new fish, which adds itself to the environment.
         Fish child = new Fish(environment(), loc,
-                              environment().randomDirection(), color());
+                              environment().randomDirection(), randomColor());
         Debug.println("  New Fish created: " + child.toString());
     }
 
@@ -372,7 +402,11 @@ public class Fish implements Locatable
      **/
     protected void die()
     {
+        Debug.turnOn();
         Debug.println(toString() + " about to die.");
+        Debug.println(toString() + " bred " + myTimesBred + " times. ");
+        Debug.println(toString() + " age " + myAge + " when died. ");
+        Debug.restoreState();
         environment().remove(this);
     }
 

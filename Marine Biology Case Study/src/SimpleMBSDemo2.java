@@ -1,3 +1,5 @@
+import java.awt.Color;
+
 // AP(r) Computer Science Marine Biology Simulation:
 // The SimpleMBSDemo2 class is copyright(c) 2002 College Entrance
 // Examination Board (www.collegeboard.com).
@@ -52,11 +54,17 @@ public class SimpleMBSDemo2
         // Construct an empty environment and several fish in the context
         // of that environment.
         BoundedEnv env = new BoundedEnv(ENV_ROWS, ENV_COLS);
-        Fish f1 = new Fish(env, new Location(2, 2));
-        Fish f2 = new Fish(env, new Location(2, 3));
-        Fish f3 = new Fish(env, new Location(5, 8));
-
-        // Construct an object that knows how to draw the environment with
+        Direction dir = new Direction("east");
+		Color col = new Color(200, 50, 50);
+	
+		double breeding = 0.05;
+		double dying = 0.1;
+		
+		Fish f1 = new Fish(env, new Location(2, 2), dir, col, breeding, dying);
+		Fish f2 = new Fish(env, new Location(2, 3), new Direction ("west"), new Color(100, 150, 50), breeding, dying);
+		Fish f3 = new Fish(env, new Location(5, 8), new Direction("south"), new Color(50, 50, 100), breeding, dying);
+       
+		// Construct an object that knows how to draw the environment with
         // a delay.
         SimpleMBSDisplay display = new SimpleMBSDisplay(env, DELAY);
 

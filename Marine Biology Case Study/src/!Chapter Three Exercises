@@ -26,18 +26,33 @@ Analysis Question Set 2:
 	   of the code and make it not as readable. But all of this is a design decision and ends up being how the 
 	
 Exercise Set 1:
-	1.
+	1. Run new simulation? yes, all but one fish died and then the one fish left breed to the point where almost 
+	   all squares are filled.
 	
-	2.
+	2. The results between chapter 2 and chapter 3 are completely different because chapter 3 has the ability to 
+	   breed and kill off fish, when chapter 2 could only move fish north, east, and west. Which chapter 3 also 
+	   can do. The changing population and the fact that random numbers are also being generated for breeding and 
+	   dying should not only change the sequence of random numbers generated for fish movement, but also the 
+	   possibilities of where a fish can move. The chapter 3 files saved will show the changing of the amount of fish
+	   in the environment. 
 	
-	3.
+	3. With this change it is almost impossible to track the original fish and its offspring because all fish are 
+	   different colors and match the colors of fish in other families of fish. You can still tell what fish dies 
+	   unless another spawns in its place in the same color. The only way to see if it had changed is to look at the ID
+	   in the the console of eclipse. 
 	
-	4.
+	4. Changed initialize method and fish constructors? yes
 	
-	5.
+	5. With 0.05 as breeding and 0.1 as dying for one run all the fish died and then the second time I ran it all died 
+	   except one who breed but the fish didn't not spread too much because they died faster than breed. Then when both 
+	   breeding and dying were 0.0 it was exactly the same as the simulation in chapter 2. 
 	
-	6.
+	6. The maximum times bred in this simulation was 2 and the minimum was 0. Yes these are what I thought would happen.
+	   But I thought the max would maybe be a little higher. 
 	
-	7.
+	7. The oldest age was 17 and the youngest age was 1. This is around what I thought yes because it should have average 
+	   to around 6 or 5.
 	
-	8.
+	8. I changed probability of breeding to 1.0/3.0 and the probability of dying to 1.0/10.0. Then at the end of act I added 
+	   probOfDying += 0.1; to add to the probability every time and then at the beginning of breed I add and if statement to go 
+	   to less than 3 then returns false. This also could make a single run simulate hundreds of fish 
