@@ -55,4 +55,4 @@ Exercise Set 1:
 	
 	8. I changed probability of breeding to 1.0/3.0 and the probability of dying to 1.0/10.0. Then at the end of act I added 
 	   probOfDying += 0.1; to add to the probability every time and then at the beginning of breed I add and if statement to go 
-	   to less than 3 then returns false. This also could make a single run simulate hundreds of fish 
+	   to less than 3 then returns false. This also could make a single run simulate hundreds of fish.
