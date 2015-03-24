@@ -1,3 +1,5 @@
+package Old_Classes;
+
 import java.util.Scanner;
 
 // reverse words in s string

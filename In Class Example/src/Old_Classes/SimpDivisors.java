@@ -1,3 +1,5 @@
+package Old_Classes;
+
 import java.util.Scanner;
 
 // Program to find common factors

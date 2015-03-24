@@ -1,3 +1,5 @@
+package Old_Classes;
+
 // This program has several scope, syntax and logic errors.  
 // Fix the errors so that the program 
 // will compile and run correctly.

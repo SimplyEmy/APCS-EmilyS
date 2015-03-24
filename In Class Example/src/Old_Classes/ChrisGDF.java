@@ -1,3 +1,5 @@
+package Old_Classes;
+
 //import scanner
 import java.util.Scanner;
 
