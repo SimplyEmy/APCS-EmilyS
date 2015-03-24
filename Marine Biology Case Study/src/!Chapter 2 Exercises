@@ -1,0 +1,270 @@
+Chapter Two Exercises
+
+Analysis Questions Set 1:
+	1. Step uses an array of Locatable objects (which is fish) that it receives from calling
+	theEnv.allObjects(). The Simulation constructor is passed the environment as one of its 
+	parameters.
+
+	2. The Simulation class works with moving the fish. So SimpleMBSDemo2 is able to construct 
+	a Simulation object and call it step method. SimpleMBSDemo2 does not display what the 
+	environment originally was because the Simulation has a constructor that does that and the 
+	Demo2 also does not have the job of displaying the environment after each movement and how 
+	the fish act because that job is up to the step method initiated with the Simulation class.
+
+Analysis Questions Set 2:
+	1. (6,3) (7,4) (8,3) (7,2)
+	
+	2. East
+	
+	3. South, North
+	
+	4. (6,3)
+	
+	5. (5,3)
+	
+	6. Location has a constructor for row and column parameters and then it also has equals, 
+	compareTo, hashCode and toString
+	compareTo - compares two locations for ordering
+	hashCode - generates a hashCode for the location
+	toString - makes the location be represented by a string and outputs a location. This 
+	could be used to print the location of a fish if something isn't working to see where it
+	is.
+	Direction has three constructors - one with no parameters that sets direction to North, 
+	one with one parameter that is degrees and another one with one parameter that is direction
+	in string form.
+	
+	Direction has some public methods as well:
+	inDegrees - returns the direction value in degrees
+	equals(Object other) - checks if other is the same direction as the other direction then 
+	returns true or false.
+	toLeft - returns a direction 90 degrees to the left of the given direction
+	toRight - returns direction 90 degrees to the right of the given direction
+	toLeft(int degrees) - returns a direction int degrees to the left of the given direction
+	toRight(int degrees) - returns a direction int degrees to the right of the given direction 
+	reverse - returns direction reverse of the direction given
+	toString - represents direction as string
+	randomDirection - returns a random direction in 0 to 360 degrees
+	roundedDir - rounds given direction to nearest "cardinal" direction and returns it
+	hashCode - makes a hash code for the given Direction object
+	
+	toString can be used for debugging if needed it can send the direction of the fish.
+	
+	 
+	
+Exercise Set 1:
+	Complete? yes (file called Chpt2ExercisesSet1)
+	
+	2. North = 0, East = 90, South = 180, West = 270 and dir3 = 0
+	
+
+For later exercises:
+
+Analysis Questions Set 3:
+	1. two
+	
+	2. 2(2, 6)North, 1(7,3)South 
+	
+	3. false
+	
+	4. true
+	
+	5. 2(2,6)North
+	
+	6. null
+	
+	7. No because a fish constructor adds the fish to the Environment, so there is no reason to add it again. 
+	The fish and the environment need to agree on where the fish is and so the fish is the one to add itself
+	so when it is constructed both the constructor and the fish have the same location for it.
+	
+	8. It is private because you wouldn't want anything else to change the fish location or direction. The fish 
+	could move somewhere else because a code messed with initialize and therefore messing up the environment and fish. 
+	
+	9. You could make theEnv a class variable but if you do that all the fish will live in the same environment 
+	and you could not display two simulations at the same time, as you could if theEnv stayed as an instance variable.
+	
+Exercise Set 2:
+	1. Driver made? yes
+	
+	2. yes is empty does behave as expected giving the one I removed true and the one I did not remove false.
+	
+	3. Adding this string to my Driver gave me an Error saying Location (8, 8) is not a valid empty location
+	at BoundedEnv.add... So this is not a valid empty location. A fish cannot be added at this location because it
+	either is taken or it is not a valid place.
+	
+
+
+Analysis Questions Set 4:	
+	1. The fish starts in a consistent state because when adding a fish to the environment, the environment takes 
+	the fish and it locations and adds it to the environment. So the fish and the environment agree on the fish's
+	location. 
+	
+	2. If a fish is removed from the environment, then it will still believe it is at a particular location. The 
+	fish is the one holding the location, keeping track of it. This would therefore put the fish in an inconsistent 
+	state because it is not linked with the environment. Also if the method recordMove in Environment does not 
+	fully work the fish could change to an inconsistent state. 	
+	
+Analysis Question Set 5:
+	1. true, true
+	
+	2. false, false
+	
+	3. false, true
+
+Analysis Question Set 6:
+	1. The the neighborsOf method returns all valid neighboring locations, not just those that are empty. The 
+	emptyNeighbors code that obtains a fish's empty neighbors from the environment could have been included in
+	nextLocation but each method is better when preforming one defined tasked and not two or three. We do not
+	want to over load nextLocation so emptyNeighbors was made to spread it out.
+	
+Exercise Set 3:
+	1. Made set 3 class instead of modifying set 2, but does the same thing
+	
+	2. Location (0, 0) has 2 neighbors
+	   Location (0, 1) has 3 neighbors
+	   Location (1, 1) has 4 neighbors
+	   The neighbors of location (0, 0) are: (0, 1) (1, 0) 
+	   The neighbors of location (0, 1) are: (0, 2) (1, 1) (0, 0) 
+	   The neighbors of location (1, 1) are: (0, 2) (1, 1) (0, 0) 
+	
+	3. All four corners will have 2 neighbors, all boundry locations will have 3 neighbors and all interior 
+	locations will have 4. So for example (19, 19) will have 2 neighbors because it is a corner, (0, 18) will 
+	have 3 because it is an edge location. 
+	
+Analysis Question Set 7:
+	1. In each diagram the fish location (1,0) has three neighbors.
+
+	2. 
+		a. 1   
+		b. 1   
+		c. 2   
+		d. 3
+
+	3. 
+		a. none
+		b. (1, 1)
+		c. (1, 1), (2, 0)
+		d. (0, 0), (1, 1), (2, 0)
+
+	
+Analysis Question Set 8:
+	1. For the fish in location (2, 2)
+		- move will call nextLocation
+		- nextLocation will call emptyNeighbors
+		- emptyNeighbors will first get a list of the four neighbors around location (2, 2), nbrs and then 
+		  determine and return a list of empty neighbors, (1, 2), (2, 1) and (2, 3)
+		- oppositeDir will then be set to the location behing the fish , (2, 1) and that location will be 
+		  removed from the list of empty neighbors.
+		- If there are no empty neighbors to select a new location from, the fishs current location is returned, 
+		  but in this case there are still two empty neighbors left.
+		- An index is otherwise randomly selected and the location of the empty neighbors at that index returned
+		- the fish in location (2, 2) might move to (1, 2) or (2, 3) depending on the randomly chosen index.
+
+	2. a new instance variable name myAge would have to be initialized in the initialize method and incremented, 
+	"upon each time step the fish age is incremented by 1". To get the age you will need another method (age) and 
+	maybe in the end modify the toString method to print the age.
+
+	
+Exercise Set 4:
+	1. Code to change color added? yes
+
+	2. Code to construct Fish using third fish constructor? yes in Chapt2ExerciseSets4
+
+Analysis Question Set 9:
+	1. There  might be a fish whose location is outside the bounded environment or the environment dimensions 
+	   might be invalid. The test cases involving input and multiple fish in the same location can be tested 
+	   with appropriate initial configuration files.
+
+	2. 
+		a. A file with a fish in every location - multiple neighbors and a non-empty neighbor 
+		b. A fish with a single adjacent empty location behind it - an empty neighbor.
+		c. A file with a single fish in an environment bugger than 1 x 2 - multiple neighbors.
+
+	3. The environment could have exactly one row and two columns or one column and two rows. In each case there 
+	   are exactly two locations, one occupied by the fish and the other empty.
+
+	
+Exercise Set 5:
+	1. Running seeded simulation - yes
+	
+	2. The text output gives me the fish ID, its location and direction of each step the fish takes or can take in the next step.
+	
+	3. Test Cases
+	Step	Fish 1			Fish 2			Fish 3			Fish 4			Fish 5			Fish 6
+	 0		(5, 5)North		(3, 3)South		(10, 10)East	(6, 8)West		(2, 10)North	(1, 1)South
+	 1		(4, 5)North		(4, 3)South		(11, 10)South	(5, 8)North		(2, 11)East		(1, 0)West
+	 2		(3, 5)North		(5, 3)South		(11, 11)East	(5, 9)East		(1, 11)North	(2, 0)South
+	 3		(2, 5)North		(5, 2)West		(10, 11)North	(6, 9)South		(0, 11)North	(3, 0)South
+	 4		(2, 6)East		(6, 2)South		(9, 11)North	(6, 10)East		(0, 10)West		(4, 0)South
+	 5		(3, 6)South		(6, 3)East		(9, 10)West		(7, 10)South	(1, 10)South	(5, 0)South
+	
+	4. Saved new file with timesteps - yes
+	
+	5. The order is top-down, left to right order. As each fish moves, it can change the available locations for a fish that has
+	   not yet had its turn to move. Fish does not specify this order. This is row majoring and not column so if it was column 
+	   it would be different.
+	
+	6. Dat files:
+		invalidenv.dat:
+			bounded 12
+		
+		emptyenv.dat
+			bounded 12 12
+			
+		onefish.dat
+			bounded 12 12Fish 3 4 South
+			
+		twofishsameloc.dat:
+			bounded 20 20Fish 5 5 NorthFish 3 2 SouthFish 5 5 East		
+			
+		fullenv.dat
+			bounded 1 1Fish 0 0 NorthFish 1 1 NorthFish 0 1 SouthFish 1 0 North  	
+	
+	7.
+	Test cases required for move:
+		- A fish with no available locations where it can move should remain in its current location.
+		- A fish with at least one available location where it can move should move to the location.
+
+	Test Case required for nextLocation:
+		- A fish for which there are no empty neighbors or where the only empty neighbor is the one behind it should 
+		  return its current location.
+		- A fish for which there is at least one valid available location, in front, to the left, or to the right, 
+		  should return one of those locations.
+
+	Test cases required for emptyNeighbors:
+		- A fish with no valid adjacent neighbors should return ArrayList.
+		- A fish with four or fewer adjacent locations, all containing valid fish, should return an empty ArrayList.
+		- A fish with at least one empty adjacent location, should return a list of empty neighbors (possibly including 
+		  the location behind the fish).
+		- A fish with four empty adjacent locations should return a list of all four locations(including the 
+		  location behind the fish).
+	
+	
+Analysis Question Set 10:
+	1. The last scenario corresponds to the design chosen by the original programmer.
+	
+	2. In the second scenario the simulation class will take more or of the jobs that the environment usually does. It
+	   would keep track of not only what behavior is is required ad part of the simulation but also is responsible
+	   of all the fish in the environment and ask them to move. The environment would end up only setting the grid and
+	   adding rows and columns and how the environment is when the simulations would have the add, remove and recordMoves
+	   method instead. The fish method would be exactly the same but it would just call simulation instead of environment.
+	
+	3. I definitely think the one that is uses now represents a good design choice because of the evenly spread methods through
+	   each class. The Simulation, fish and environment classes all work together well and have their own purpose. I think 
+	   having the environment deal with the spread and also the fish's movement works well because it can easily work with the 
+	   fish class and also have the environment saved in one class. If it was all in the simulation class there would be too 
+	   much saved in one class that is also being sent through and receiving from fish. But having the simulation class is 
+	   important in this case because it is dealing with a particular environment when environment would be just overall. And
+	   of course fish should deal with ID and color and location because it is the specifics about particular fish.
+	
+	4. The fourth scenario would be bad and just doesn't make sense. Why would you have the environment stuff in simulation and 
+	   all the fish stuff in environment? Honestly that scenario is just bad planning because the reason for having each class is
+	   to organize the code and make it make sense, but calling environment and have it not deal with the environment does not make 
+	   sense.
+	
+	5. I think because the way we have it now how it is so spread apart for each class and what they do it could help and work with
+	   different application. Due to the classes have methods that can run together and are not just put all together you could use 
+	   them in other cases. The fish class could be used for a whole different system other than fish because of it dealing with ID, 
+	   location and color for example and not the environment so much. It has the ability to be changed around and used else where.
+	   Just like environment as well.  
+	
+		
